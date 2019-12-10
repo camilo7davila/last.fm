@@ -1,0 +1,122 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "buttons middle otherside";
+    height: 60px;
+    justify-content: center;
+    align-content: center;
+    background: black;
+}
+.container-buttons {
+    grid-area: buttons;
+    display: grid;
+    grid-template-columns:repeat(5,50px);
+    justify-content: start;
+    align-content: center;
+    height: inherit;
+    color: gray;
+}
+
+.logo-1{
+    width: 100%;
+    height: inherit;
+}
+
+.logo-1 i{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-image{
+    grid-area: middle;
+    max-width: 100%;
+    height: inherit;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-image img{
+    width: 30%;
+    height: 50%;
+}
+
+.container-nav {
+    grid-area: otherside;
+    height: inherit;
+}
+
+ul{
+    margin: 0 5px;
+    height: inherit;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    height: inherit;
+}
+
+li p{
+    height: 100%;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+@media screen and (max-width:768px){
+    .container{
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:60px 60px ;
+        grid-template-areas: "buttons middle"
+                            "otherside otherside";
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width:480px){
+    .container{
+        display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:60px 60px 60px;
+        grid-template-areas: "middle"
+                            "buttons"
+                            "otherside";
+        height: 100%;
+    }
+    .container-buttons {
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+@media screen and (max-width:320px){
+    .container{
+        display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:60px 60px 60px 60px;
+        grid-template-areas: "middle"
+                            "buttons"
+                            "otherside"
+                            "otherside";
+        height: 100%;
+    }
+li p{
+    font-size: 10px;
+}
+}
