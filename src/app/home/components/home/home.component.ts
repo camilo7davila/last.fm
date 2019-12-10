@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicService } from 'src/app/core/services/music/music.service';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { infoArtist } from 'src/app/interfaces/user.interface';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private musicService: MusicService) { }
+
+  info: Observable<infoArtist[]>;
 
   ngOnInit() {
+    this.info = this.musicService.getAllArtist();
+    this.musicService.getAllArtist().subscribe(data => {
+      console.log(data[1].image[4]);
+    });
   }
 
 }

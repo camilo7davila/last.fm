@@ -1,9 +1,12 @@
 <section>
     <div class="container">
-        <div class="container-card">
+        <div class="container-card" *ngFor="let artist of (info | async)">
             <div class="img">
+                <figure class="post-img">
+                    <img src={{artist.image[3].text}} alt="">
+                </figure>
                 <div class="img-comment">
-                    <p class="title">title song and time</p>
+                    <p class="title">{{artist.name}}</p>
                     <p class="artist">artist</p>
                 </div>
             </div>
