@@ -1,4 +1,6 @@
 .container{
+    position: fixed;
+    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "buttons middle otherside";
@@ -79,6 +81,7 @@ li p{
 
 @media screen and (max-width:768px){
     .container{
+        position: static;
         display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:60px 60px ;
@@ -91,6 +94,7 @@ li p{
 
 @media screen and (max-width:480px){
     .container{
+        position: static;
         display: grid;
     grid-template-columns: 1fr;
     grid-template-rows:60px 60px 60px;
@@ -103,13 +107,18 @@ li p{
         justify-content: center;
         align-content: center;
     }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width:320px){
     .container{
+        position: static;
         display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:60px 60px 60px 60px;
+    grid-template-rows:60px 60px 60px auto;
         grid-template-areas: "middle"
                             "buttons"
                             "otherside"

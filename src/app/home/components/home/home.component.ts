@@ -17,9 +17,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.info = this.musicService.getAllArtist();
-    this.musicService.getAllArtist().subscribe(data => {
-      console.log(data[1].image[4]);
-    });
   }
 
 }
