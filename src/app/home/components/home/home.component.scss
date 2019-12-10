@@ -1,0 +1,41 @@
+.container {
+    border: 1px solid gray;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.container-card{
+    border: 1px solid green;
+    height: 300px;
+    width: 300px;
+}
+
+.img {
+    background-image: url("./../../../../assets/Lastfm_logo.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center ;
+    height: 250px;
+    position: relative;
+}
+
+.img-comment {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.img-comment p {
+    margin: 5px 0;
+    padding: 0 5px ;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
